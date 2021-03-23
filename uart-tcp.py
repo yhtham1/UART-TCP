@@ -57,7 +57,8 @@ def uarttx():  # TCP -> UART
 
 def main_thread():
 	global EXIT_REQUEST
-	print('UART-TCP Server (UART:{} BAUD:{}) <--> TCPPORT:{}'.format(UART_PORT, UART_BAUD, TCP_PORT))
+	server_ip = tcp4.get_ip('8.8.8.8')
+	print('UART-TCP Server (UART:{} BAUD:{}) <--> {}:{}'.format(UART_PORT, UART_BAUD, server_ip, TCP_PORT))
 	while 0 == EXIT_REQUEST:
 		#		c = stdscr.getkey()
 		#		if 'q' == c:
