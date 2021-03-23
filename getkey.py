@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import fcntl
+# import fcntl
 import termios
 import sys
 import os
